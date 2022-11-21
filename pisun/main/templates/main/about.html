@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% load static %}
+{% static 'main/js/about.js' %}
+
+{% block title %}
+About
+{% endblock %}
+
+
+{% block content %}
+    <h1>About Morty</h1>
+    <p>You can change photo</p>
+    <script type="text/javascript" src="{% static 'main/js/about.js' %}"></script>
+    <table style="width: 100%;">
+        <tr style="text-align: center; vertical-align: center;">
+            <td style="width:'300';">
+                  <img id="image" src="{% static 'main/img/1.jpg' %}" alt="My image" width="300" >
+            </td>
+             <td style="width:'300';">
+                 <button type="submit" onclick="change_img()">2</button><br>
+                  <a href="javascript:l_image('{% static 'main/img/1.jpg' %}')">Small Morty</a><br>
+                  <a href="javascript:l_image('{% static 'main/img/2.jpg' %}')">Crazy Morty</a><br>
+                  <a href="javascript:l_image('{% static 'main/img/3.jpg' %}')">Morty slash</a><br>
+                  <a href="javascript:l_image('{% static 'main/img/4.jpg' %}')">Morty depressed</a><br>
+             </td>
+
+        </tr>
+    </table>
+{% endblock %}
+
